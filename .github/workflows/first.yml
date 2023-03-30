@@ -20,6 +20,8 @@ jobs:
 #Running multiple jobs with different os
   run-windows-commands:
     runs-on: windows-latest
+#To make this job run in series i.e (run one job first b4 the other use the needs instruction)
+    needs: ["run-shell-commands"]
     steps:
     - name: print working Directory
       run: pwd

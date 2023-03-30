@@ -41,7 +41,7 @@ jobs:
       - name: Analyze with SonarCloud
         uses: sonarsource/sonarcloud-github-action@master
         with:
-          projectBaseDir: my-custom-directory
+          projectBaseDir: https://github.com/obinnaaliogor/actionstest.git
           args: >
            -Dsonar.organization=my-organization
            -Dsonar.projectKey=my-projectkey

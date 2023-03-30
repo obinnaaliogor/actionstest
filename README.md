@@ -9,12 +9,12 @@ https://docs.sonarcloud.io/getting-started/github/
 ### as shown above
 ### where actionstest is my repo name
 ### where obinnaliogor is my projectkey and organization name
-### NB if you dont create sonar-project.properties file at your project root directory and add the orgname and projectkey, you will have the below error 
+# NB if you dont create sonar-project.properties file at your project root directory and add the orgname and projectkey, you will have the below error 
 
-### ERROR: Error during SonarScanner execution
-### ERROR: You must define the following mandatory properties for 'Unknown': sonar.projectKey, sonar.organization
+## ERROR: Error during SonarScanner execution
+## ERROR: You must define the following mandatory properties for 'Unknown': sonar.projectKey, sonar.organization
 
-### If your sonarcloud is set at automatic analysis whereas you are running a CI analysis, The scan will fail.
+# If your sonarcloud is set at automatic analysis whereas you are running a CI analysis, The scan will fail.
 ## You will have the following error:
 
 ## ERROR: You are running CI analysis while Automatic Analysis is enabled. Please consider disabling one or the other.

@@ -4,7 +4,7 @@
 # sonar.organization=obinnaaliogor
 
 ### You have to create a file called sonar-project.properties in the root dir of your project and add projectkey and organization name
-### show above
+### as shown above
 ### where actionstest is my repo name
 ### where obinnaliogor is my projectkey and organization name
 ### NB if you dont save this at your project root directory, you will have this error 

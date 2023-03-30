@@ -4,7 +4,7 @@ on:
 jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
-  steps:
+    steps:
     - name: echo string
       run: echo "Hello"
     - name: Multi line string

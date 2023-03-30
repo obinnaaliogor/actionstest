@@ -5,26 +5,18 @@ jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
     steps:
-    - name: echo string
-      run: echo "Hello"
+    - name: Checkout 
+      uses: actions/checkout@v1 #This will copy our code into the runner
+    - name: Set Terraform 
+      uses: hashicorp/setup-terraform@v2 #This will install terraform into the runner
+      with: 
+        terraform_version: 1.1.9 #With what version of terraform
+    - name: Running Terraform command (Terraform init)
+      run: terraform init
     - name: Multi line string
       run: |
         pwd
         node -v
         ls -a
-    - name: python command
-      run: |
-        import platform
-        print(platform.processor())
-      shell: python
-#Running multiple jobs with different os
-  run-windows-commands:
-    runs-on: windows-latest
-#To make this job run in series i.e (run one job first b4 the other use the needs instruction)
-    needs: ["run-shell-commands"]
-    steps:
-    - name: print working Directory
-      run: pwd
-      shell: bash
 
 

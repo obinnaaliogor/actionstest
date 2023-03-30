@@ -8,7 +8,11 @@
 https://docs.sonarcloud.io/getting-started/github/
 ### as shown above
 ### where actionstest is my repo name
-### where obinnaliogor is my projectkey and organization name
+### where obinnaliogor is my projectkey and organization name (you will receive this once you signup or integrate your gitHub with sonarcloud)
+### Reference:
+https://github.com/marketplace/actions/sonarcloud-scan
+
+https://www.sonarsource.com/products/sonarcloud/
 # NB if you dont create sonar-project.properties file at your project root directory and add the orgname and projectkey, you will have the below error 
 
 ## ERROR: Error during SonarScanner execution

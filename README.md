@@ -4,13 +4,12 @@
 # sonar.organization=obinnaaliogor
 
 ### You have to create a file called sonar-project.properties in the root dir of your project and add projectkey and organization name
+### Reference:
+https://docs.sonarcloud.io/getting-started/github/
 ### as shown above
 ### where actionstest is my repo name
 ### where obinnaliogor is my projectkey and organization name
-### NB if you dont save this at your project root directory, you will have this error 
-
-### Reference:
-https://docs.sonarcloud.io/getting-started/github/
+### NB if you dont create sonar-project.properties file at your project root directory and add the orgname and projectkey, you will have the below error 
 
 ### ERROR: Error during SonarScanner execution
 ### ERROR: You must define the following mandatory properties for 'Unknown': sonar.projectKey, sonar.organization

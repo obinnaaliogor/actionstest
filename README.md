@@ -1,7 +1,7 @@
 #### Terraform workflow with sonarcloud scan for Analysis
 
-sonar.projectKey=obinnaaliogor_actionstest
-sonar.organization=obinnaaliogor
+#### sonar.projectKey=obinnaaliogor_actionstest
+#### sonar.organization=obinnaaliogor
 
 # You have to create a file called sonar-project.properties in the root dir of your project and add projectkey and organization name
 # show above

@@ -1,6 +1,12 @@
 name: shell commands
 on: 
   - push
+env:
+  AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}} 
+  AWS_SECRET_ACESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+  #Means get the accesskey and secretaccess key from "secrets" 
+  # Where it is saved in your repo.
+  #The way the env is passed means it covers for the entire workflow, you can also decide to add it directly at the plan level.
 jobs:
   Terraform-workflow:
     runs-on: ubuntu-latest
@@ -18,7 +24,7 @@ jobs:
     - name: Terraform Formating #Checking of the syntax
       run: terraform fmt
     - name: Terraform Planning 
-      run: terraform plan
+      run: terraform plan #Credentails are needed for terraform to perform this action
     - name: Multi line string
       run: |
         pwd

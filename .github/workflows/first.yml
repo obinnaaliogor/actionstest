@@ -17,6 +17,8 @@ jobs:
       run: terraform validate #Checking for consistency in the code
     - name: Terraform Formating #Checking of the syntax
       run: terraform fmt
+    - name: Terraform Planning 
+      run: terraform plan
     - name: Multi line string
       run: |
         pwd

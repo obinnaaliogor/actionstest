@@ -26,11 +26,11 @@ jobs:
     - name: Terraform Planning 
       run: terraform plan #Credentails are needed for terraform to perform this action
     - name: Terraform Apply  
-      run: terraform apply #Credentails are needed for terraform to perform this action
-    - name: Multi line string
-      run: |
-        pwd
-        node -v
-        ls -a
+      run: terraform apply 
+    - name: Terraform Apply  
+      run: terraform apply -auto-approve #You can add a condition here that only on a PR can this run.
+    - name: Terraform Destroy  
+      run: terraform destroy -auto-approve
+  
 
 

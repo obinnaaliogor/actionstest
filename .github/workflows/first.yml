@@ -26,10 +26,15 @@ jobs:
       run: terraform fmt
     - name: Terraform Planning 
       run: terraform plan #Credentails are needed for terraform to perform this action
-    #- name: Terraform Apply Auto 
-     # run: terraform apply -auto-approve #You can add a condition here that only on a PR can this run.
-    #- name: Terraform Destroy  
+    #- name: Terraform Apply Auto
+      #run: terraform apply -auto-approve #You can add a condition here that only on a PR can this run.
+    #- name: Terraform Destroy
       #run: terraform destroy -auto-approve
+    - name: release #This build step to enable the large semantic v file to be pushed to your repo.
+      run: npx semantic-release
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
   sonarcloud:
       runs-on: ubuntu-latest
       steps:

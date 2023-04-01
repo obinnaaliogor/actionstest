@@ -26,10 +26,10 @@ jobs:
       run: terraform fmt
     - name: Terraform Planning 
       run: terraform plan #Credentails are needed for terraform to perform this action
-    - name: Terraform Apply Auto 
-      run: terraform apply -auto-approve #You can add a condition here that only on a PR can this run.
-    - name: Terraform Destroy  
-      run: terraform destroy -auto-approve
+    #- name: Terraform Apply Auto 
+     # run: terraform apply -auto-approve #You can add a condition here that only on a PR can this run.
+    #- name: Terraform Destroy  
+      #run: terraform destroy -auto-approve
   sonarcloud:
       runs-on: ubuntu-latest
       steps:

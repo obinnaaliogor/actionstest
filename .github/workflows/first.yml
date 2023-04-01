@@ -31,8 +31,8 @@ jobs:
     - name: Terraform Planning 
       run: terraform plan #Credentails are needed for terraform to perform this action
     - name: release #This build step to enable the large semantic v file to be pushed to your repo.
-      run: npx semantic-release
       if: github.event_name == 'push' && github.ref == 'refs/head/main'
+      run: npx semantic-release
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Terraform Apply Auto

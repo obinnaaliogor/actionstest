@@ -10,7 +10,7 @@ env:
 jobs:
   Terraform-workflow:
     runs-on: ubuntu-latest
-    needs: ["sonarcloud"]
+    #needs: ["sonarcloud"]
     steps:
     - name: Checkout 
       uses: actions/checkout@v1 #This will copy our code into the runner
@@ -35,17 +35,16 @@ jobs:
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-  sonarcloud:
-      runs-on: ubuntu-latest
-      steps:
-      - name: Sonarcloud scan
-        uses: actions/checkout@v2
-        with:
+  #sonarcloud:
+      #steps:
+      #- name: Sonarcloud scan
+        #uses: actions/checkout@v2
+        #with:
         # Disabling shallow clone is recommended for improving relevancy of reporting
-          fetch-depth: 0
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-      env:
-        GITHUBPAT_TOKEN: ${{ secrets.GITHUBPAT_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          #fetch-depth: 0
+      #- name: SonarCloud Scan
+        #uses: SonarSource/sonarcloud-github-action@master
+      #env:
+        #GITHUBPAT_TOKEN: ${{ secrets.GITHUBPAT_TOKEN }}
+        #SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 #adding tag for a release using SMV

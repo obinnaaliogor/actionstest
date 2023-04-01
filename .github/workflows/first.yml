@@ -21,7 +21,7 @@ jobs:
     - name: Running Terraform command (Terraform init)
       run: terraform init
     - name: Terraform Validating
-      run: terraform validate #Checking for consistency in the code
+      run: terraform validate #Checking for consistency in the code.
     - name: Terraform Formating #Checking of the syntax
       run: terraform fmt
     - name: Terraform Planning 

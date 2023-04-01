@@ -17,7 +17,7 @@ jobs:
     - name: Set Terraform 
       uses: hashicorp/setup-terraform@v2 #This will install terraform into the runner
       with: 
-        terraform_version: 1.1.9 #With what version of terraform
+        terraform_version: 1.1.9 #Version of Terraform that the runner will install
     - name: Running Terraform command (Terraform init)
       run: terraform init
     - name: Terraform Validating

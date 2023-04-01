@@ -1,4 +1,4 @@
-name: shell commands
+name: Terraform workflow
 on: 
   - push
 env:

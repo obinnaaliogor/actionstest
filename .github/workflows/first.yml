@@ -1,4 +1,4 @@
-name: Terraform workflow
+name: Terraform vpc workflow
 on: 
   - push
 env:

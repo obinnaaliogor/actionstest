@@ -10,6 +10,13 @@ Environment = "Prod"
   }
 }
 terraform {
+  required_version = "~> 1.0"
+  required_providers {
+    aws{
+      source = "harshicorp/aws"
+      version = "~> 3.0" #optional but recommended in production
+    }
+  }
   backend "s3" {
     bucket = "obinnatfstate-bucket"
     key = "prod/tfstate.tfstate"

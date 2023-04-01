@@ -1,4 +1,4 @@
-name: shell commands
+name: Terraform vpc workflow
 on: 
   - push
 env:
@@ -17,19 +17,19 @@ jobs:
     - name: Set Terraform 
       uses: hashicorp/setup-terraform@v2 #This will install terraform into the runner
       with: 
-        terraform_version: 1.1.9 #With what version of terraform
+        terraform_version: 1.1.9 #Version of Terraform that the runner will install
     - name: Running Terraform command (Terraform init)
       run: terraform init
     - name: Terraform Validating
-      run: terraform validate #Checking for consistency in the code
+      run: terraform validate #Checking for consistency in the code.
     - name: Terraform Formating #Checking of the syntax
       run: terraform fmt
     - name: Terraform Planning 
       run: terraform plan #Credentails are needed for terraform to perform this action
-    - name: Terraform Apply Auto 
-      run: terraform apply -auto-approve #You can add a condition here that only on a PR can this run.
-    - name: Terraform Destroy  
-      run: terraform destroy -auto-approve
+    #- name: Terraform Apply Auto 
+     # run: terraform apply -auto-approve #You can add a condition here that only on a PR can this run.
+    #- name: Terraform Destroy  
+      #run: terraform destroy -auto-approve
   sonarcloud:
       runs-on: ubuntu-latest
       steps:

@@ -26,3 +26,4 @@ https://www.sonarsource.com/products/sonarcloud/
 ### Solution is to go to your sonarcloud account, click on administration and disable automatical analysis
 ### Reference:
 https://sonarcloud.io/project/analysis_method?id=obinnaaliogor_actionstest
+#

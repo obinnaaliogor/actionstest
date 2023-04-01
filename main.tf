@@ -6,5 +6,6 @@ resource "aws_vpc" "actions" {
 
   tags = {
 Name = "Class30"
+Environment = "Prod"
   }
 }

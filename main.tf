@@ -7,7 +7,7 @@ resource "aws_vpc" "actions" {
   tags = {
 Name = "Demo"
 Environment = "Prod"
-Division = "account dept"
+Division = "sales dept"
   }
 }
 terraform {

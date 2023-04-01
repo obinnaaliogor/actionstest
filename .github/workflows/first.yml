@@ -32,9 +32,11 @@ jobs:
       run: terraform plan #Credentails are needed for terraform to perform this action
     - name: release #This build step to enable the large semantic v file to be pushed to your repo.
       run: npx semantic-release
+      if: github.event_name == 'push' && github.ref == 'refs/head/main'
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     - name: Terraform Apply Auto
+      if: github.event_name == 'push' && github.ref == 'refs/head/main'
       run: terraform apply -auto-approve #You can add a condition here that only on a PR can this run.
     #- name: Terraform Destroy
       #run: terraform destroy -auto-approve
